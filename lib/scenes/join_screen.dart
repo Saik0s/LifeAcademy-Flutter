@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:life_academy/scenes/home_screen.dart';
 
 class JoinScreen extends StatefulWidget {
   @override
@@ -8,7 +9,11 @@ class JoinScreen extends StatefulWidget {
 class _JoinScreenState extends State<JoinScreen> {
   final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
 
-  _onSubmit(BuildContext context) {}
+  _onSubmit(BuildContext context) {
+    Navigator.of(context).push(new MaterialPageRoute(builder: (_) {
+      return new HomeScreen();
+    }));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +35,7 @@ class _JoinScreenState extends State<JoinScreen> {
                     hintText: 'Какой код доступа к игре?',
                     labelText: 'Код доступа',
                   ),
-                  keyboardType: TextInputType.emailAddress,
+                  keyboardType: TextInputType.text,
                   onSaved: (String value) {
                     // person.email = value;
                   },

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class NewHostScreen extends StatefulWidget {
+class AdulthoodScreen extends StatefulWidget {
   @override
-  _NewHostScreenState createState() => new _NewHostScreenState();
+  _AdulthoodScreenState createState() => new _AdulthoodScreenState();
 }
 
-class _NewHostScreenState extends State<NewHostScreen> {
+class _AdulthoodScreenState extends State<AdulthoodScreen> {
   final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
 
   _onSubmit(BuildContext context) {}
@@ -13,9 +13,9 @@ class _NewHostScreenState extends State<NewHostScreen> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: AppBar(
-        title: new Text('Создание игры'),
-      ),
+//      appBar: AppBar(
+//        title: new Text('Создание игры'),
+//      ),
       body: new Center(
         child: new Form(
           key: _formKey,
@@ -26,9 +26,9 @@ class _NewHostScreenState extends State<NewHostScreen> {
               children: <Widget>[
                 new TextFormField(
                   decoration: const InputDecoration(
-                    icon: const Icon(Icons.people),
-                    hintText: 'Сколько игроков будет играть',
-                    labelText: 'Количество игроков',
+                    icon: const Icon(Icons.cloud),
+                    hintText: 'Какая у тебя мечта?',
+                    labelText: 'Твоя мечта',
                   ),
                   keyboardType: TextInputType.number,
                   onSaved: (String value) {
@@ -38,7 +38,7 @@ class _NewHostScreenState extends State<NewHostScreen> {
                 const SizedBox(height: 24.0),
                 new Center(
                   child: new RaisedButton(
-                    child: new Text('Создать'),
+                    child: new Text('Сохранить'),
                     onPressed: () => _onSubmit(context),
                   ),
                 ),
